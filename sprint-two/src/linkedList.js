@@ -2,7 +2,7 @@ var LinkedList = function() {
   var list = {};
   list.head = null;
   list.tail = null;
-  //O(1) time complexity
+  //Time complexity O(1)
   list.addToTail = function(value) {
     var newNode = Node(value);
     if (this.tail) {
@@ -13,13 +13,13 @@ var LinkedList = function() {
     this.tail = newNode;
     
   };
-
+  //Time complexity O(1)
   list.removeHead = function() {
     var currentHead = this.head.value;
     this.head = this.head.next;
     return currentHead;
   };
-
+  //Time complexity O(n)
   list.contains = function(target) {
     var compareEl = this.head;
     while(compareEl !== null){
